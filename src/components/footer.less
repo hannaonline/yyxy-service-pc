@@ -1,0 +1,76 @@
+@import '../less/variables';
+@import '../less/utils';
+
+.footer{
+	.inner{
+		display: flex;
+		justify-content: space-between;
+		.ptop(50);
+		.pbottom(30);
+		.left{
+			.qr-box{
+				display: flex;
+				align-items: center;
+				.mbottom(18);
+				p{
+					.font-line(12,14);
+					color:#666;
+					.width(14);
+					text-align: justify;
+					.mright(20);
+				}
+				img{
+					.wh(120,118);
+					display: block;
+					.mright(15);
+				}
+				.btn-box{
+					.height(114);
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					a{
+						display: block;
+						.wh(193,50);
+					}
+					.btn-ios{
+						background: url('../images/bottom-btn-apple-normal.png') no-repeat center center;
+						background-size: 100% 100%;
+					}
+					.btn-android{
+						background: url('../images/bottom-btn-android-normal.png') no-repeat center center;
+						background-size: 100% 100%;
+					}
+					.btn-ios:hover{
+						background: url('../images/bottom-btn-apple-press.png') no-repeat center center;
+						background-size: 100% 100%;
+					}
+					.btn-android:hover{
+						background: url('../images/bottom-btn-android-press.png') no-repeat center center;
+						background-size: 100% 100%;
+					}
+				}
+			}
+			.copyright{
+				p{
+					.font-PingFangSC();
+					color:#999;
+					.font-line(12,18);
+				}
+			}
+		}
+		.right{
+			p{
+				.font-PingFangSC();
+				color:#333;
+				.font-line(12,18);
+				text-align: center;
+				.mbottom(15);
+			}
+			img{
+				.wh(114,114);
+				display: block;
+			}
+		}
+	}
+}

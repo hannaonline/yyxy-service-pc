@@ -1,0 +1,39 @@
+@import '../less/variables';
+@import '../less/utils';
+
+.top-nav{
+	background: @white;
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	z-index:99;
+	.nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.height(60);
+		.left{
+			.logo{
+				display: block;
+				.width(145);
+				img{
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+		.right{
+			.btn-download{
+				.wh(91,30);
+				display: block;
+				background: url('../images/float-btn-normal.png') no-repeat center center;
+				background-size: 100% 100%;
+			}
+			.btn-download:hover{
+				background: url('../images/float-btn-press.png') no-repeat center center;
+				background-size: 100% 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,275 @@
+@import './variables';
+
+.background-linear-gradient() {
+  background-image: linear-gradient(270deg, #FF78B1 0%, #9E82EB 100%);
+}
+
+.background-image-2x(@name;@ext:png) {
+  background-image: url('../images/@{name}.@{ext}');
+  background-image: image-set(url('../images/@{name}@2x.@{ext}') 2x);
+}
+
+.background-image-3x(@name;@ext:png) {
+  background-image: url('../images/@{name}.@{ext}');
+  background-image: image-set(url('../images/@{name}@2x.@{ext}') 2x, url('../images/@{name}@3x.@{ext}') 3x);
+}
+
+.px2rem(@s;@design-width:@design-width) {
+  @size: @s / (@design-width / @device-width) / @default-zoom * 2 * 1rem;
+}
+
+.font-display() {
+  font-family: @font-display;
+  font-weight: normal;
+}
+
+.font-PingFangSC-Light() {
+  font-family: @font-family;
+  font-weight: 300;
+}
+
+.font-PingFangSC() {
+  font-family: @font-family;
+  font-weight: 400;
+}
+
+.font-PingFangSC-Medium() {
+  font-family: @font-family;
+  font-weight: 500;
+}
+
+.font-PingFangSC-Regular() {
+  font-family: @font-family;
+  font-weight: bold;
+}
+
+.font-M(){
+  font-family: "Microsoft YaHei";
+}
+
+.font-line(@font-size;@line-height) {
+  .font-size(@font-size);
+  .line-height(@line-height);
+}
+
+.font-size(@font-size) {
+  .px2rem(@font-size);
+  font-size: @size;
+}
+
+.line-height(@number) {
+  .px2rem(@number);
+  line-height: @size;
+}
+
+.letter-spacing(@number) {
+  .px2rem(@number);
+  letter-spacing: @size;
+}
+
+.min-width(@number) {
+  .px2rem(@number);
+  min-width: @size;
+}
+
+.max-width(@number) {
+  .px2rem(@number);
+  max-width: @size;
+}
+
+.width(@number) {
+  .px2rem(@number);
+  width: @size;
+}
+
+.height(@number) {
+  .px2rem(@number);
+  height: @size;
+}
+
+.wh(@width;@height) {
+  .width(@width);
+  .height(@height);
+}
+
+.left(@number) {
+  .px2rem(@number);
+  left: @size;
+}
+
+.right(@number) {
+  .px2rem(@number);
+  right: @size;
+}
+
+.top(@number) {
+  .px2rem(@number);
+  top: @size;
+}
+
+.bottom(@number) {
+  .px2rem(@number);
+  bottom: @size;
+}
+
+.mtop(@number) {
+  .px2rem(@number);
+  margin-top: @size;
+}
+
+.mleft(@number) {
+  .px2rem(@number);
+  margin-left: @size;
+}
+
+.mright(@number) {
+  .px2rem(@number);
+  margin-right: @size;
+}
+
+.mbottom(@number) {
+  .px2rem(@number);
+  margin-bottom: @size;
+}
+
+.ptop(@number) {
+  .px2rem(@number);
+  padding-top: @size;
+}
+
+.pleft(@number) {
+  .px2rem(@number);
+  padding-left: @size;
+}
+
+.pright(@number) {
+  .px2rem(@number);
+  padding-right: @size;
+}
+
+.pbottom(@number) {
+  .px2rem(@number);
+  padding-bottom: @size;
+}
+
+.padding(@all) {
+  .px2rem(@all);
+  padding: @size;
+}
+
+.padding(@vertical;@horizontal) {
+  & {
+    .px2rem(@vertical);
+    padding-top: @size;
+    padding-bottom: @size;
+  }
+  & {
+    .px2rem(@horizontal);
+    padding-left: @size;
+    padding-right: @size;
+  }
+}
+
+.padding(@top;@horizontal;@bottom) {
+  & {
+    .px2rem(@top);
+    padding-top: @size;
+  }
+  & {
+    .px2rem(@horizontal);
+    padding-left: @size;
+    padding-right: @size;
+  }
+  & {
+    .px2rem(@bottom);
+    padding-bottom: @size;
+  }
+}
+
+.padding(@top;@right;@bottom;@left) {
+  & {
+    .px2rem(@top);
+    padding-top: @size;
+  }
+  & {
+    .px2rem(@right);
+    padding-right: @size;
+  }
+  & {
+    .px2rem(@bottom);
+    padding-bottom: @size;
+  }
+  & {
+    .px2rem(@left);
+    padding-left: @size;
+  }
+}
+
+.margin(@all) {
+  .px2rem(@all);
+  margin: @size;
+}
+
+.margin(@vertical;@horizontal) {
+  & {
+    .px2rem(@vertical);
+    margin-top: @size;
+    margin-bottom: @size;
+  }
+  & {
+    .px2rem(@horizontal);
+    margin-left: @size;
+    margin-right: @size;
+  }
+}
+
+.margin(@top;@horizontal;@bottom) {
+  & {
+    .px2rem(@top);
+    margin-top: @size;
+  }
+  & {
+    .px2rem(@horizontal);
+    margin-left: @size;
+    margin-right: @size;
+  }
+  & {
+    .px2rem(@bottom);
+    margin-bottom: @size;
+  }
+}
+
+.margin(@top;@right;@bottom;@left) {
+  & {
+    .px2rem(@top);
+    margin-top: @size;
+  }
+  & {
+    .px2rem(@right);
+    margin-right: @size;
+  }
+  & {
+    .px2rem(@bottom);
+    margin-bottom: @size;
+  }
+  & {
+    .px2rem(@left);
+    margin-left: @size;
+  }
+}
+
+.border-radius(@number) {
+  .px2rem(@number);
+  border-radius: @size;
+}
+
+.border(@size;@style;@color) {
+  .px2rem(@size);
+  border: @size @style @color;
+}
+
+.border(@size;@color) {
+  .px2rem(@size);
+  border: @size solid @color;
+}
+

@@ -1,0 +1,22 @@
+{
+  "name": "index-10-30",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "fis-optimizer-clean-css": "^0.0.12",
+    "fis3": "^3.4.36",
+    "fis3-hook-relative": "^2.0.1",
+    "fis3-parser-less2": "^0.1.3",
+    "fis3-preprocessor-autoprefixer": "^0.1.1"
+  },
+  "scripts": {
+    "start": "fis3 server start -p 9999 && cd src && fis3 release development -wL",
+    "build": "cd src && fis3 release production -d ./../dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "zepto": "^1.2.0"
+  }
+}
