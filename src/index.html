@@ -4,6 +4,7 @@
     <link rel="import" href="./components/meta.html?__inline"/>
     <link rel="stylesheet" href="./less/main.less"/>
     <script src="./js/font.js"></script>
+    <script src="./js/jquery-1.9.1.min.js"></script>
     <title>首页</title>
 </head>
 <body>
@@ -12,16 +13,29 @@
     <div class="block b0">
         <div class="inner">
             <div class="left">
-                <a href="javascript:void(0);" class="qrcode">
-                    <img src="img/qrcode.jpg"/>
-                </a>
-                <div class="btn-banner-box">
-                    <a href="javascript:void(0);" class="btn-ios"></a>
-                    <a href="javascript:void(0);" class="btn-android"></a>
+                <div class="b-l-top">
+                    <h5>迄今为止</h5>
+                    <h4>最好的<span>在线学琴方式</span></h4>
+                    <p>零基础&nbsp;&nbsp;七天学会<span>&nbsp;&nbsp;尤克里里&nbsp;</span>弹唱</p>
+                </div>
+                <div class="b-l-bottom">
+                    <a href="javascript:void(0);" class="qrcode">
+                        <img src="img/qrcode.jpg"/>
+                    </a>
+                    <div class="btn-banner-box">
+                        <a href="javascript:void(0);" class="btn-ios"></a>
+                        <a href="javascript:void(0);" class="btn-android"></a>
+                    </div>
                 </div>
             </div>
             <div class="right">
-                <a href="#anchor" class="btn-experience"></a>
+                <div class="b-r-top">
+                    <img src="images/phone.png">
+                    <p>全球首创"智能互动视频音乐教学"</p>
+                </div>
+                <div class="b-r-bottom">
+                    <a href="#anchor" class="btn-experience"></a>
+                </div>
             </div>
         </div>
     </div>
@@ -45,7 +59,7 @@
                     <source src="http://s.immusician.com/static/videos/teachers.mp4" type="video/mp4">
                 </video>
                 <div class="vd-cover" id="vd-cover">
-                    <a href="javascript:void(0);" class="icon-play" id="btn-play-video" ></a>
+                    <a href="javascript:void(0);" class="icon-play" id="btn-play-video"></a>
                 </div>
             </div>
             <div class="teach-handle">
@@ -143,20 +157,23 @@
     <div class="block b7" id="anchor">
         <div class="inner">
             <h4>让人人享受公平、高效的音乐教育</h4>
-            <p>现在和<span>500，000</span>用户一起加入AI音乐学院学尤克里里</p>
+            <p>现在和<span>500,000</span>用户一起加入AI音乐学院学尤克里里</p>
             <a href="#anchor" class="btn-imm-exp"></a>
         </div>
     </div>
 </div>
 <link rel="import" href="./components/footer.html?__inline"/>
 <script>
-    document.querySelector("#btn-play-video").onclick = function(){
-        document.querySelector("#vd-cover").style.display = "none";
+    var w = $(".video-box").width();
+    var h = w * 0.44;
+    $("#video-show").css({"width": w + "px", "height": h + "px"})
+    $("#btn-play-video").on("click", function () {
+        $("#vd-cover").hide();
         document.querySelector("#video-show").play();
-        document.querySelector("#video-show").addEventListener("ended",function(){
-            document.querySelector("#vd-cover").style.display = "block";
+        document.querySelector("#video-show").addEventListener("ended", function () {
+            $("#vd-cover").show();
         })
-    }
+    })
 </script>
 </body>
 </html>
